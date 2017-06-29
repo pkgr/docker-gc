@@ -1,5 +1,5 @@
 buildpack: https://github.com/pkgr/pkgr-noop-buildpack.git
-cli: bin/docker-gc
+cli: docker-gc
 default_dependencies: false
 before:
   - mkdir -p packaging bin
