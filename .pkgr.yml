@@ -7,5 +7,10 @@ before:
   - echo '0 * * * * root /usr/bin/docker-gc' > packaging/docker-gc-cron
 targets:
   ubuntu-16.04: true
+  ubuntu-14.04: true
+  debian-7: true
+  debian-8: true
+  centos-7: true
+  sles-12: true
 crons:
   - packaging/docker-gc-cron
