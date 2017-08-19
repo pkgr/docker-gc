@@ -4,7 +4,7 @@ default_dependencies: false
 before:
   - mkdir -p packaging bin
   - mv docker-gc bin/
-  - echo '0 5 * * * root /usr/bin/docker-gc' > packaging/docker-gc-cron
+  - echo '0 5 * * * root FORCE_IMAGE_REMOVAL=1 FORCE_CONTAINER_REMOVAL=1 /usr/bin/docker-gc' > packaging/docker-gc-cron
 targets:
   ubuntu-16.04: true
   ubuntu-14.04: true
